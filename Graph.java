@@ -148,7 +148,6 @@ public class Graph implements GraphInterface<Town, Road> {
 
 	@Override
 	public void dijkstraShortestPath(Town sourceVertex) {
-		// always retrieves the Town with the smallest distance
 		Queue<Town> queue = new LinkedList<>();
 		
 		// each vertex has infinite distance and unprocessed except for the source
@@ -160,7 +159,7 @@ public class Graph implements GraphInterface<Town, Road> {
 		queue.offer(sourceVertex);
 		
 		while (queue.size() != 0) {
-			Town currentTown = queue.poll(); // always gets the town with the smallest distance
+			Town currentTown = queue.poll();
 			
 			// if the currentTown is already processed
 			if (!unprocessed.contains(currentTown)) {
