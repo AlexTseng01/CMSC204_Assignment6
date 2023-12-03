@@ -149,7 +149,7 @@ public class Graph implements GraphInterface<Town, Road> {
 	@Override
 	public void dijkstraShortestPath(Town sourceVertex) {
 		// always retrieves the Town with the smallest distance
-		Queue<Town> queue = new PriorityQueue<>();
+		Queue<Town> queue = new LinkedList<>();
 		
 		// each vertex has infinite distance and unprocessed except for the source
 		for (Town town : towns) {
